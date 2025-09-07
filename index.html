@@ -11,46 +11,45 @@
   </head>
   <body>
     <header>
-        <div class="container">
-            <div class="nav-wrap">
-            <div class="nav-adress">
-                <img src="assets/img/location-svgrepo-com.svg" alt="">
-                <span>Москва</span>
-            </div>
-            <nav>
-                <ul>
-                <li><a href="#">Каталог компаний</a></li>
-                <li class="dropdown">
-                    <a href="#">
-                    Популярные услуги
-                    <img src="assets/img/chevron-down-svgrepo.svg" alt="" class="arrow">
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Генеральная уборка квартиры</a></li>
-                        <li><a href="#">Уборка квартиры после ремонта</a></li>
-                        <li><a href="#">Поддерживающая уборка квартиры</a></li>
-                        <li><a href="#">Уборка запущенной квартиры</a></li>
-                        <li><a href="#">Уборка квартиры после пожара</a></li>
-                        <li><a href="#">Уборка квартиры после потопа</a></li>
-                        <li><a href="#">Уборка дома после ремонта</a></li>
-                        <li><a href="#">Мытьё окон</a></li>
-                        <li><a href="#">Поддерживающая уборка офиса</a></li>
-                        <li><a href="#">Уборка офиса после ремонта</a></li>
-                        <li><a href="#">Уборка после смерти</a></li>
+        <div class="nav-big-wrap">
+            <div class="container">
+                <div class="nav-wrap">
+                <div class="nav-adress">
+                    <img src="assets/img/location-svgrepo-com.svg" alt="">
+                    <span>Москва</span>
+                </div>
+                <nav>
+                    <ul>
+                    <li><a href="#">Каталог компаний</a></li>
+                    <li class="dropdown">
+                        <a href="#">
+                        Популярные услуги
+                        <img src="assets/img/chevron-down-svgrepo.svg" alt="" class="arrow">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Генеральная уборка квартиры</a></li>
+                            <li><a href="#">Уборка квартиры после ремонта</a></li>
+                            <li><a href="#">Поддерживающая уборка квартиры</a></li>
+                            <li><a href="#">Уборка запущенной квартиры</a></li>
+                            <li><a href="#">Уборка квартиры после пожара</a></li>
+                            <li><a href="#">Уборка квартиры после потопа</a></li>
+                            <li><a href="#">Уборка дома после ремонта</a></li>
+                            <li><a href="#">Мытьё окон</a></li>
+                            <li><a href="#">Поддерживающая уборка офиса</a></li>
+                            <li><a href="#">Уборка офиса после ремонта</a></li>
+                            <li><a href="#">Уборка после смерти</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Рейтинги компаний</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">+Заказать клининг</a></li>
+                    <li><a href="#">+Добавить компанию</a></li>
                     </ul>
-                </li>
-                <li><a href="#">Рейтинги компаний</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">+Заказать клининг</a></li>
-                <li><a href="#">+Добавить компанию</a></li>
-                </ul>
-            </nav>
+                </nav>
+                </div>
             </div>
         </div>
-        </header>
-
-    <main>
-        <section class="main-header">
+        <div class="main-header">
             <div class="container">
                 <div class="main-header-wrap">
                     <div class="main-header-logo-wrap">
@@ -68,7 +67,109 @@
                         </a>
                         <div class="main-search-box">
                             <img src="assets/img/magnifier-search-zoo.svg" alt="zoom">
-                            <input type="text" placeholder="Поиск клининговой компании">
+                            <input type="text" id="search-input" placeholder="Поиск клининговой компании">
+                            <span class="main-search-box-closer">Закрыть</span>
+                            <div class="search-result-box" id="search-result">
+                                <div class="search-result-box-over-wrap">
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="search-result-item">
+                                        <a class="search-result-item-a" href="#"></a>
+                                        <div class="search-result-item-logo">
+                                            <img class="search-result-item-logo-img" src="assets/img/logo.png (1).webp" alt="logo">
+                                        </div>
+                                        <div class="search-result-item-text">
+                                            Клининговая компания "Уборка 24"
+                                        </div>
+                                        <div class="search-result-item-verify">
+                                            <img class="search-result-item-verify-img" src="assets/img/compte-twitter-certi.webp" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="main-header-fav-wrap">
@@ -84,7 +185,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
+    <main>
         <section class="banner-plates">
             <div class="container">
                 <div class="banner-plates-main-wrap">
@@ -175,25 +278,52 @@
                     <div class="filter-box-header">
                         <div class="filter-box-title">112 клининговых компания в Москве</div>
                         <div class="filter-box-buttons">
-                            <button class="btn filter-box-button">
+                            <label class="filter-box-button">
+                                <input type="radio" name="filter" class="filter-radio">
                                 <span>С высокой оценкой</span>
-                            </button>
-                            <button class="btn filter-box-button">
+                            </label>
+
+                            <label class="filter-box-button">
+                                <input type="radio" name="filter" class="filter-radio">
                                 <span>По кол-ву отзывов</span>
-                            </button>
+                            </label>
                         </div>
                     </div>
                     <div class="filter-box-items">
-                        <div class="filter-box-item">
-                            <div class="filter-box-item-choose-title">
-                                Тип уборки
-                            </div>
+                        <div class="filter-box-item" id="filter-box-item-type">
+                            <div class="filter-box-item-tapper"></div>
+                            <div class="filter-box-item-choose-title">Тип уборки</div>
                             <div class="filter-box-select-header">
                                 <span>Генеральная уборка</span>
                                 <img src="assets/img/blue-chevron-down.svg" alt="chevron">
                             </div>
+                            <div class="filter-box-dropdown">
+                                <input class="filter-box-dropdown-search" type="text" placeholder="Название услуги">
+                                <div class="filter-box-dropdown-list">
+                                    <ul>
+                                        <li>Генеральная уборка</li>
+                                        <li>После ремонта</li>
+                                        <li>Поддерживающая</li>
+                                        <li>Запущенных квартир</li>
+                                        <li>После пожара</li>
+                                        <li>После потопа</li>
+                                        <li>Срочная уборка</li>
+                                        <li>Комплексная</li>
+                                        <li>Однокомнатной</li>
+                                        <li>Двухкомнатной</li>
+                                        <li>Запущенных квартир</li>
+                                        <li>После пожара</li>
+                                        <li>После потопа</li>
+                                        <li>Срочная уборка</li>
+                                        <li>Комплексная</li>
+                                        <li>Однокомнатной</li>
+                                        <li>Двухкомнатной</li>
+                                    </ul>
+                                </div>  
+                            </div>
                         </div>
-                        <div class="filter-box-item">
+                        <div class="filter-box-item" id="filter-box-item-area">
+                            <div class="filter-box-item-tapper"></div>
                             <div class="filter-box-item-choose-title">
                                 Район
                             </div>
@@ -201,14 +331,54 @@
                                 <span>Любой</span>
                                 <img src="assets/img/blue-chevron-down.svg" alt="chevron">
                             </div>
+                            <div class="filter-box-dropdown">
+                                <div class="filter-box-dropdown-list">
+                                    <ul>
+                                        <li>Район 1</li>
+                                        <li>Район 2</li>
+                                        <li>Район 3</li>
+                                    </ul>
+                                </div>  
+                            </div>
                         </div>
-                        <div class="filter-box-item">
+                        <div class="filter-box-item" id="filter-box-item-date">
+                            <div class="filter-box-item-tapper"></div>
                             <div class="filter-box-item-choose-title">
                                 Дата уборки
                             </div>
                             <div class="filter-box-select-header">
-                                <span>Завтра</span>
+                                <span>Сегодня</span>
                                 <img src="assets/img/blue-chevron-down.svg" alt="chevron">
+                            </div>
+                            <div class="filter-box-dropdown">
+                                <div class="filter-box-dates-items">
+                                    <div class="filter-box-date-item">
+                                        <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter" class="filter-radio">
+                                            <span>Сегодня</span>
+                                        </label>
+                                        <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter" class="filter-radio">
+                                            <span>Завтра</span>
+                                        </label>
+                                        <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter" class="filter-radio">
+                                            <span>На этой неделе</span>
+                                        </label>
+                                        <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter" class="filter-radio">
+                                            <span>В этом месяце</span>
+                                        </label>
+                                        <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter" class="filter-radio">
+                                            <span>В следующем месяце</span>
+                                        </label>
+                                        <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter" class="filter-radio">
+                                            <span>Не важно</span>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -392,6 +562,7 @@
                         <img class="rates-company-big-corner-top" src="assets/img/1234.webp" alt="">
                         <img class="rates-company-big-corner-bottom" src="assets/img/1234.webp" alt="">
                         <div class="rates-company-big-img" style="background: url(assets/img/555.webp);">
+                            <a href="#"></a>
                             <div class="rates-company-big-text">
                                 <div class="rates-company-big-title">
                                     ТОП-10 лучших клининговых компаний Москвы
