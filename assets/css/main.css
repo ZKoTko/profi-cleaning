@@ -618,6 +618,10 @@ nav ul li {
 }
 .filter-box-select-header img {
     width: 20px;
+    transition: .3s;
+}
+.filter-box-select-header.active img {
+    transform: rotate(180deg);
 }
 .company-item {
     background: #fff;
@@ -843,7 +847,7 @@ nav ul li {
     left: 0;
     background-color: #ffffff;
     padding-left: 20px;
-    border-radius: 0px 22px 0px 0px;
+    border-radius: 0px 22px 0px 20px;
     padding-top: 20px;
     padding-bottom: 16px;
     height: 82px;
@@ -1531,5 +1535,96 @@ nav ul li img.arrow {
 @media (min-width: 1200px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl {
         max-width: 1224px;
+    }
+}
+@media (max-width: 1200px) {
+    .main-search-box {
+        width: 300px;
+    }
+    .main-header-logo-text {
+        display: none;
+    }
+    .banner-item-image {
+        width: 210px;
+        height: 195px;
+    }
+    .banner-plate-btn {
+        width: 165px;
+    }
+    .banner-item-content {
+        padding-left: 8px;
+    }
+    .filter-box-date-item-button {
+        padding: 8px 12px;
+    }
+    .filter-box-date-item {
+        padding: 0;
+    }
+    .rates-company-big {
+        max-width: 400px;
+        height: 360px;
+    }
+    .rates-company-image {
+        height: 180px;
+    }
+    .rates-company-big-text {
+        max-width: 320px;
+    }
+    .rates-company-big-corner-bottom {
+        left: 320px;
+    }
+    .rates-company-big-title {
+        font-size: 15px;
+        line-height: 18px;
+        max-width: 220px;
+    }
+    .rates-item-slide {
+        min-width: 300px;
+        max-width: 300px;
+    }
+    .reviews-slide {
+        min-width: 300px;
+        max-width: 300px;
+    }
+    .footer-box-text {
+        max-width: 480px;
+    }
+    .company-items-section .company-item-text-content {
+        padding: 0 10px 10px 10px;
+    }
+    .company-items-section .company-item-header-logo {
+        max-width: 70px;
+    }
+    .company-items-section .company-item-header-cert {
+        display: none;
+    }
+    .footer-big-plate-text {
+        max-width: 200px;
+    }
+    .footer-tg-plate {
+        padding: 16px 10px;
+    }
+    .footer-big-plate-title {
+        margin-right: 32px;
+    }
+    .footer-tg-plate-btn {
+        font-size: 13px;
+    }
+}
+@media (max-width: 991px) {
+    .nav-big-wrap{
+        display: none;
+    }
+    .main-header-search-wrap > a {
+        display: none;
+    }
+    .main-header-fav-box span {
+        display: none;
+    }
+    .main-header-fav-box {
+        width: 37px;
+    }
+    .banner-plates-main-wrap {
+        flex-direction: column;
     }
 }

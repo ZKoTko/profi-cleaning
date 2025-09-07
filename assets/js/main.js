@@ -73,6 +73,12 @@ window.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const filterBoxes = document.querySelectorAll(".filter-box-item");
 
+  function setActive(box, state) {
+    box.classList.toggle("active", state);
+    const header = box.querySelector(".filter-box-select-header");
+    if (header) header.classList.toggle("active", state);
+  }
+
   filterBoxes.forEach(box => {
     const tapper = box.querySelector(".filter-box-item-tapper");
     const headerText = box.querySelector(".filter-box-select-header span");
@@ -89,13 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     listItems.forEach(item => {
       item.addEventListener("click", function () {
-        // игнорируем "ничего не найдено"
-        if (this.classList.contains("not-found")) return;
+        if (this.classList.contains("not-found")) return; // игнорируем "ничего не найдено"
 
         headerText.textContent = this.textContent;
         listItems.forEach(i => i.classList.remove("selected"));
         this.classList.add("selected");
-        box.classList.remove("active");
+        setActive(box, false);
       });
     });
 
@@ -145,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (input) input.checked = true;
         const text = this.querySelector("span").textContent;
         headerText.textContent = text;
-        box.classList.remove("active");
+        setActive(box, false);
       });
     });
 
@@ -155,9 +160,9 @@ document.addEventListener("DOMContentLoaded", function () {
       opener.addEventListener("click", function (e) {
         e.stopPropagation();
         filterBoxes.forEach(otherBox => {
-          if (otherBox !== box) otherBox.classList.remove("active");
+          if (otherBox !== box) setActive(otherBox, false);
         });
-        box.classList.toggle("active");
+        setActive(box, !box.classList.contains("active"));
       });
     }
   });
@@ -165,10 +170,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Клик вне фильтров → закрыть все
   document.addEventListener("click", function (e) {
     filterBoxes.forEach(box => {
-      if (!box.contains(e.target)) box.classList.remove("active");
+      if (!box.contains(e.target)) setActive(box, false);
     });
   });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
