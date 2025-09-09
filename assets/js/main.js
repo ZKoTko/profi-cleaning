@@ -1,23 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const companySwiper = new Swiper(".rates-company-swiper", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      loop: false, 
-      navigation: {
-        nextEl: ".new-company-slider-next",
-        prevEl: ".new-company-slider-prev",
-      },
-    });
-    const reviewsSwiper = new Swiper(".reviews-swiper", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      loop: false, 
-      navigation: {
-        nextEl: ".reviews-slider-next",
-        prevEl: ".reviews-slider-prev",
-      },
-    });
+  let companySwiper;
+  let reviewsSwiper;
+
+  function initSwipers() {
+    if (window.innerWidth >= 992) {
+      // Company swiper
+      if (!companySwiper) {
+        companySwiper = new Swiper(".rates-company-swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          loop: false,
+          navigation: {
+            nextEl: ".new-company-slider-next",
+            prevEl: ".new-company-slider-prev",
+          },
+        });
+      }
+      // Reviews swiper
+      if (!reviewsSwiper) {
+        reviewsSwiper = new Swiper(".reviews-swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          loop: false,
+          navigation: {
+            nextEl: ".reviews-slider-next",
+            prevEl: ".reviews-slider-prev",
+          },
+        });
+      }
+    } else {
+      // Уничтожаем company swiper
+      if (companySwiper) {
+        companySwiper.destroy(true, true);
+        companySwiper = null;
+      }
+      // Уничтожаем reviews swiper
+      if (reviewsSwiper) {
+        reviewsSwiper.destroy(true, true);
+        reviewsSwiper = null;
+      }
+    }
+  }
+
+  // Первый запуск
+  initSwipers();
+  // Пересоздание при изменении размера окна
+  window.addEventListener("resize", initSwipers);
 });
+
 
 
 
@@ -193,3 +223,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".submenu-toggle").forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const parent = toggle.closest(".has-submenu");
+      parent.classList.toggle("open");
+      toggle.textContent = parent.classList.contains("open") ? "−" : "+";
+    });
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".mob-burger");
+  const menu = document.querySelector(".mob-menu");
+  const filter = document.querySelector(".page-filter");
+  const closer = document.querySelector(".mob-menu-closer");
+
+  function openMenu() {
+    menu.classList.add("active");
+    filter.classList.add("active");
+  }
+
+  function closeMenu() {
+    menu.classList.remove("active");
+    filter.classList.remove("active");
+  }
+
+  if (burger) {
+    burger.addEventListener("click", openMenu);
+  }
+  if (closer) {
+    closer.addEventListener("click", closeMenu);
+  }
+  if (filter) {
+    filter.addEventListener("click", closeMenu);
+  }
+});

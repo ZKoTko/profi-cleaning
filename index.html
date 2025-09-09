@@ -10,7 +10,43 @@
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
+    <div class="page-filter"></div>
+    <div class="mob-menu">
+        <div class="mob-menu-head">
+            <button class="cross mob-menu-closer" aria-label="Закрыть">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mob-menu-links">
+            <ul>
+                <li>
+                <a href="#">Каталог компаний</a>
+                </li>
 
+                <li class="has-submenu">
+                <div class="menu-item-wrapper">
+                    <a href="#">Популярные услуги</a>
+                    <span class="submenu-toggle">+</span>
+                </div>
+                    <ul class="submenu">
+                        <li><a href="#">Услуга 1</a></li>
+                        <li><a href="#">Услуга 2</a></li>
+                        <li><a href="#">Услуга 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Рейтинг компаний</a>
+                </li>
+                <li>
+                    <a href="#">Отзывы</a>
+                </li>
+                <li>
+                    <a href="#">+ Добавить компанию</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <header>
         <div class="nav-big-wrap">
             <div class="container">
@@ -65,7 +101,7 @@
                                 <img src="assets/img/menu-navigation-grid.svg" alt="grid">
                                 <span>Все улуги</span>
                             </button>
-                        </a>
+                        </a>  
                         <div class="main-search-box">
                             <img src="assets/img/magnifier-search-zoo.svg" alt="zoom">
                             <input type="text" id="search-input" placeholder="Поиск клининговой компании">
@@ -173,16 +209,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="main-header-fav-wrap">
-                        <a href="#">
-                            <div class="main-header-fav-box">
-                                <span>Избранное</span>
-                                <img src="assets/img/_3_.webp" alt="heart">
-                                <div class="main-header-fav-box-count">
-                                    1
+                    <div class="mob-controls-wrap">
+                        <div class="mob-search-caller">
+                            <img src="assets/img/magnifier-search-zoo.svg" alt="">
+                        </div>  
+                        <div class="main-header-fav-wrap">
+                            <a href="#">
+                                <div class="main-header-fav-box">
+                                    <span>Избранное</span>
+                                    <img src="assets/img/_3_.webp" alt="heart">
+                                    <div class="main-header-fav-box-count">
+                                        1
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
+                        <div class="mob-burger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -203,6 +249,9 @@
                             </div>
                         </div>
                         <div class="banner-plate-content">
+                            <div class="banner-big-plate-mob-title">
+                                Найди лучшую клининговую компанию в Москве
+                            </div>
                             <div class="banner-plate-content-text">
                                 Выбери подходящую клининговую компанию в Москве из 398 компаний
                             </div>
@@ -215,7 +264,7 @@
                         </div>
                     </div>
                     <div class="banner-items-wrap">
-                        <div class="banner-item">
+                        <div class="banner-item" id="banner-item-1">
                             <div class="banner-item-content">
                                 <div class="banner-item-content-title">
                                     Рейтинг клининговых компаний в Москве
@@ -248,7 +297,7 @@
                             </div>
                             <div class="banner-item-image" style="background: url(assets/img/russian_girl_35_year.webp);"></div>
                         </div>
-                        <div class="banner-item">
+                        <div class="banner-item" id="banner-item-2">
                             <div class="banner-item-content">
                                 <div class="banner-item-bar">
                                     <span>Статистика проекта</span>
@@ -565,7 +614,7 @@
                         <img class="rates-company-big-corner-bottom" src="assets/img/1234.webp" alt="">
                         <div class="rates-company-big-img" style="background: url(assets/img/555.webp);">
                             <a href="#"></a>
-                            <div class="rates-company-big-text">
+                            <div class="rates-company-big-text rates-company-big-text-pc">
                                 <div class="rates-company-big-title">
                                     ТОП-10 лучших клининговых компаний Москвы
                                 </div>
@@ -576,6 +625,16 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="rates-company-big-text rates-company-big-text-mob">
+                                <div class="rates-company-big-title">
+                                    ТОП-10 лучших клининговых компаний Москвы
+                                </div>
+                                <div class="rates-company-big-btn-wrap">
+                                    <button class="btn rates-company-big-btn">
+                                        <img src="assets/img/gray-arrow-right.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
                     </div>
                     <div class="rates-company-item">
                         <div class="rates-company-image"
@@ -1107,7 +1166,7 @@
     <footer>
         <div class="container">
             <div class="footer-row row">
-                <div class="footer-col col-xl-3 col-lg-3">
+                <div class="footer-col col-xl-3 col-lg-3 col-6">
                     <div class="footer-col-content">
                         <div class="footer-col-title">
                             ТОП компании
@@ -1120,7 +1179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-col col-xl-3 col-lg-3">
+                <div class="footer-col col-xl-3 col-lg-3 col-6">
                     <div class="footer-col-content">
                         <div class="footer-col-title">
                             Популярные услуги
@@ -1133,7 +1192,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-col col-xl-3 col-lg-3">
+                <div class="footer-col col-xl-3 col-lg-3 col-6">
                     <div class="footer-col-content">
                         <div class="footer-col-title">
                             Информация
@@ -1146,7 +1205,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-col col-xl-3 col-lg-3">
+                <div class="footer-col col-xl-3 col-lg-3 col-6">
                     <div class="footer-col-content">
                         <div class="footer-big-title">Служба поддержки 9:00 - 18:00 по МСК</div>
                         <div class="footer-mail-wrap">
