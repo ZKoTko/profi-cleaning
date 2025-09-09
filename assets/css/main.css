@@ -2209,7 +2209,7 @@ nav ul li img.arrow {
     }
     .reviews-swiper .swiper-wrapper::after {
         content: "";
-        flex: 0 0 20px;
+        flex: 0 0 60px;
     }
     .rates-company-swiper {
         width: 120%;
