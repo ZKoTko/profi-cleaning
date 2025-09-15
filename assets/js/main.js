@@ -260,3 +260,42 @@ document.addEventListener("DOMContentLoaded", function () {
     filter.addEventListener("click", closeMenu);
   }
 });
+
+document.querySelectorAll('input[name="filter"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    document.querySelectorAll('input[name="filter"]').forEach(r => r.removeAttribute('checked'));
+    radio.setAttribute('checked', 'checked');
+  });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.querySelector(".card-page-reviews-select");
+  const value = select.querySelector(".card-page-reviews-select-value");
+  const dropdown = select.querySelector(".card-page-reviews-select-dropdown");
+  const options = dropdown.querySelectorAll(".card-page-reviews-select-choose");
+
+  // Открыть/закрыть дропдаун
+  select.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("card-page-reviews-select-choose")) {
+      dropdown.classList.toggle("active");
+    }
+  });
+
+  // Выбор элемента
+  options.forEach((option) => {
+    option.addEventListener("click", (e) => {
+      value.textContent = option.textContent; // подставляем выбранное значение
+      dropdown.classList.remove("active");   // закрываем дропдаун
+      e.stopPropagation();
+    });
+  });
+
+  // Клик вне селекта закрывает дропдаун
+  document.addEventListener("click", (e) => {
+    if (!select.contains(e.target)) {
+      dropdown.classList.remove("active");
+    }
+  });
+});
