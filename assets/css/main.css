@@ -2066,7 +2066,7 @@ nav ul li img.arrow {
 }
 .card-page-about-descr {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 21px;
     margin-bottom: 20px;
 }
@@ -2085,7 +2085,8 @@ nav ul li img.arrow {
     margin-bottom: 10px;
 }
 .card-page-about-gallery-item {
-    width: calc(33.33% - 10px);
+    min-width: calc(33.33% - 10px);
+    flex: 1;
     height: 170px;
     border-radius: 16px;
     background-position: center !important;
@@ -2379,9 +2380,15 @@ nav ul li img.arrow {
 .card-page-reviews-select-dropdown.active {
     display: block;
 }
-
-
-
+.card-page-banner-title-cert-mob {
+    display: none;
+}
+.card-page-expert-user-mob-title {
+    display: none;
+}
+.card-page-comp-items-mob-title {
+    display: none;
+}
 
 
 
@@ -3025,5 +3032,298 @@ nav ul li img.arrow {
     }
     .card-page-banner-title-cert {
         display: none;
+    }
+    .card-page-banner-title-cert-mob {
+        display: block;
+        width: 16px;
+        position: absolute;
+        right: -32px;
+        bottom: 0;
+    }
+    .card-page-banner-title h1 > span {
+        position: relative;
+    }
+    .card-page-banner-title-cert-modal {
+        top: calc(100% + 4px);
+    }
+    .card-page-banner-title h1 {
+        font-size: 21px;
+        line-height: 27px;
+        max-width: 250px;
+    }
+    .card-page-banner-header {
+        align-items: flex-start;
+    }
+    .card-page-banner-header-fire-bar {
+        width: 100%;
+        flex-grow: 1;
+    }
+    .card-page-banner-header-btns {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .card-page-banner-title-cert-img {
+        transform: translateY(-2px);
+        width: 16px;
+    }
+    .card-page-banner-main-image {
+        height: 200px;
+    }
+    .card-page-banner-logo {
+        display: none;
+    }
+    .card-page-banner-review-item {
+        flex-wrap: wrap;
+    }
+    .card-page-banner-review-item-logo {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+    .card-page-banner-review-item {
+        padding: 10px;
+        height: unset;
+        align-self: stretch;
+        width: 105px;
+        gap: 0;
+        justify-content: center;
+    }
+    .card-page-banner-main-image {
+        border-radius: 13px;
+    }
+    .card-page-banner-review-item-stars {
+        height: auto;
+        max-width: 55px;
+    }
+    .card-page-banner-table-item {
+        padding: 0 10px;
+    }
+    .card-page-banner-table-title {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .card-page-banner-table-value {
+        font-size: 13px;
+        line-height: 21px;
+    }
+    .card-page-banner-table-value {
+        width: 60%;
+    }
+    .card-page-banner-table-value-whatsapp-btn {
+        width: 96px;
+    }
+    .card-page-banner-table-value-tg-btn {
+        width: 96px;
+    }
+    .card-page-expert-wrap {
+        flex-direction: column;
+    }
+    .card-page-expert-title {
+        display: none;
+    }
+    .card-page-expert-user {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+    }
+    .card-page-expert-user img {
+        width: 16px;
+    }
+    .card-page-expert-btn {
+        width: 100%;
+    }
+    .card-page-section {
+        padding: 20px 20px;
+    }
+    .card-page-banner-table-value-tg-btn-wrap {
+        width: 100%;
+    }
+    .card-page-expert-wrap {
+        gap: 10px;
+    }
+    .card-page-expert-wrap {
+        align-items: flex-start;
+    }
+    .card-page-about-table-item-value {
+        font-size: 12px;
+    }
+    .card-page-about-table-item-price {
+        font-size: 12px;
+        width: 45%;
+    }
+    .card-page-about-table-head-item-price {
+        font-size: 12px;
+        font-weight: 700;
+        width: 45%;
+    }
+    .card-page-about-table-head-item-value {
+        font-size: 12px;
+    }
+    .card-page-about-table-item {
+        padding: 0 10px;
+    }
+    .card-page-about-table-head-item {
+        padding: 0 10px;
+    }
+    .card-page-about-gallery-item {
+        min-width: calc(50% - 10px);
+        height: 104px;
+    }
+    .card-page-about-gallery-item-play {
+        width: 42px;
+        height: 42px;
+    }
+    .card-page-about-gallery-item-play img {
+        width: 14px;
+        transform: translateX(1px);
+    }
+    .card-page-reviews-form-header {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .card-page-reviews-form-header input {
+        width: 100%;
+        font-size: 15px;
+    }
+    .card-page-reviews-select {
+        width: 100%;
+        font-size: 15px;
+    }
+    .card-page-reviews-select-value {
+        font-size: 15px;
+    }
+    .card-page-reviews-rate-wrap::after {
+        display: none;
+    }
+    .card-page-reviews-rate-wrap-corner {
+        display: none;
+    }
+    .card-page-reviews-rate-wrap {
+        padding-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        height: unset;
+        gap: 20px;
+    }
+    #card-page-review-textarea {
+        border-radius: 14px 14px 0 0;
+        font-size: 15px;
+    }
+    .card-page-reviews-subm {
+        width: 100%;
+        height: 70px;
+        font-size: 15px;
+    }
+    .card-page-reviews-rate-main-wrapper span {
+        font-size: 15px;
+        line-height: 24px;
+    }
+    .card-page-reviews-rate-main-wrapper img {
+        height: 28px;
+    }
+    .card-page-reviews-select-choose {
+        margin-bottom: 4px;
+    }
+    .card-page-expert-user-mob-title {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .card-page-expert-user-wrapper {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .card-page-comp-items .company-item::after {
+        width: 119px;
+    }
+    .card-page-comp-items .company-item-stars-wrap {
+        width: 110px;
+    }
+    .card-page-comp-items .company-item-corner-top {
+        right: 119px;
+    }
+    .card-page-comp-items .company-item-header-cert{
+        width: 15px;
+    }
+    .card-page-comp-items .company-item-title {
+        font-size: 16px;
+        line-height: 20px;
+        row-gap: 2px;
+    }
+    .card-page-comp-items .company-item-buttons {
+        margin-top: 10px;
+    }
+    .card-page-comp-items .company-item::after {
+        width: 119px;
+    }
+    .card-page-comp-items .company-item-stars-wrap {
+        width: 110px;
+    }
+    .card-page-comp-items .company-item-corner-top {
+        right: 119px;
+    }
+    .card-page-comp-items .company-item-header-cert{
+        width: 15px;
+    }
+    .card-page-comp-items .company-item-image-wrap {
+        padding: 0 20px;
+    }
+    .card-page-comp-items .company-item-image {
+        height: 150px;
+    }
+    .card-page-comp-items .company-item-title {
+        font-size: 16px;
+        line-height: 20px;
+        row-gap: 2px;
+    }
+    .card-page-comp-items .company-item-title-reviews img {
+        width: 15px;
+    }
+    .card-page-comp-items .company-item-title-reviews span {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .card-page-comp-items .company-item-go-btn {
+        height: 47px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .card-page-comp-items .company-item-fav-btn{
+        width: 48px;
+        height: 47px;
+        min-width: 48px;
+    }
+    .card-page-comp-items {
+        width: 120%;
+        transform: translateX(-12px);
+    }
+    .card-page-comp-items-wrapper {
+        overflow-x: scroll;
+        padding-bottom: 16px;
+        position: relative;
+        padding-left: 12px;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    .card-page-comp-items-wrapper::after {
+        content: "";
+        flex: 0 0 60px;
+    }
+    .company-all-btn-wrap {
+        max-width: 360px;
+        padding: 0 12px;
+    }
+    .card-page-comp-items-mob-title {
+        display: block;
+        color: #222222;
+        font-size: 23px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: start;
+        padding-left: 25px;
+        margin-bottom: 20px;
     }
 }

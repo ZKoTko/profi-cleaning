@@ -261,7 +261,17 @@
                         <section class="card-page-banner card-page-section">
                             <div class="card-page-banner-header">
                                 <div class="card-page-banner-title">
-                                    <h1>Клининговая компания "Уборка 24"</h1>
+                                    <h1>
+                                        <span>Клининговая компания "Уборка 24"
+                                            <div class="card-page-banner-title-cert card-page-banner-title-cert-mob">
+                                                <img src="assets/img/compte-twitter-certi.webp" class="card-page-banner-title-cert-img" alt="">
+                                                <div class="card-page-banner-title-cert-modal">
+                                                    <img src="assets/img/verified_n2.svg" alt="">
+                                                    <span>Компания проверена</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </h1>
                                     <div class="card-page-banner-title-cert">
                                         <img src="assets/img/compte-twitter-certi.webp" class="card-page-banner-title-cert-img" alt="">
                                         <div class="card-page-banner-title-cert-modal">
@@ -347,9 +357,12 @@
                         </section>
                         <section class="card-page-expert card-page-section">
                             <div class="card-page-expert-wrap">
-                                <div class="card-page-expert-user">
-                                    <div class="card-page-expert-user-photo" style="background: url(assets/img/expert.jpg.webp);"></div>
-                                    <img src="assets/img/compte-twitter-certi.webp" alt="">
+                                <div class="card-page-expert-user-wrapper">
+                                    <div class="card-page-expert-user">
+                                        <div class="card-page-expert-user-photo" style="background: url(assets/img/expert.jpg.webp);"></div>
+                                        <img src="assets/img/compte-twitter-certi.webp" alt="">
+                                    </div>
+                                    <div class="card-page-expert-user-mob-title">Константин Филатов </div>
                                 </div>
                                 <div class="card-page-expert-text">
                                     <div class="card-page-expert-title">
@@ -359,7 +372,7 @@
                                         Наш эксперт портала Profiklining.ru подготовил для Вас <a href="#">рейтинг лучших клининговых компаний</a> в Москве. Если Вы еще не определились с компаний, обязательно прочитайте его!
                                     </div>
                                 </div>
-                                <a href="#">
+                                <a href="#" class="card-page-banner-table-value-tg-btn-wrap">
                                     <button class="btn card-page-expert-btn">
                                         Смотреть рейтинг компаний
                                     </button>
@@ -495,6 +508,9 @@
                         </section>
                     </div>
                     <div class="card-page-comp-items">
+                        <div class="card-page-comp-items-mob-title">
+                            ТОП-3 клининговых компаний
+                        </div>
                         <div class="card-page-comp-items-wrapper">
                             <div class="company-item">
                                 <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
@@ -710,173 +726,222 @@
                 </div>
             </div>
         </section>
-        <section class="company-items-section">
+        <section class="new-company-section">
             <div class="container">
-                <div class="rates-company-title">Похожие клининговые компании</div>
-                <div class="company-items-wrap">
-                    <div class="company-item">
-                        <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
-                        <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
-                        <div class="company-item-stars-wrap">
-                            <img src="assets/img/fake-reviews_.webp" alt="">
-                            <span>5,0</span>
-                        </div>
-                        <div class="company-item-header">
-                            <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
-                            <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
-                        </div>
-                        <div class="company-item-image-wrap">
-                            <div class="company-item-image"
-                            style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
-                        </div>
-                        <div class="company-item-text-content">
-                            <div class="company-item-title">
-                                <div class="company-item-title-type">
-                                    Клининговая компания
-                                </div>
-                                <span>"Уборка 24"</span>
-                                <div class="company-item-title-reviews">
-                                    <img src="assets/img/comment-svgrepo-com.svg" alt="">
-                                    <span>191 отзыв</span>
+                <h2 class="rates-company-title">Похожие клининговые компании</h2>
+                <div class="swiper rates-company-swiper">
+                    <div class="swiper-wrapper rates-company-swiper-wrapper">
+                        <div class="swiper-slide company-item rates-item-slide">
+                            <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
+                            <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
+                            <div class="company-item-stars-wrap">
+                                <div class="no-rate-wrap">
+                                    Нет рейтинга
                                 </div>
                             </div>
-                            <div class="company-item-buttons">
-                                <a href="#" style="flex-grow: 1;">
-                                    <button class="btn company-item-go-btn">
-                                        <span>Карточка компании</span>
-                                        <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                            <div class="company-item-header">
+                                <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
+                                <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
+                            </div>
+                            <div class="company-item-image-wrap">
+                                <div class="company-item-image" style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
+                            </div>
+                            <div class="company-item-text-content">
+                                <div class="company-item-title">
+                                    <div class="company-item-title-type">
+                                        Клининговая компания
+                                    </div>
+                                    <span>"Уборка 24"</span>
+                                    <div class="company-item-title-reviews">
+                                        <img src="assets/img/comment-svgrepo-com.svg" alt="">
+                                        <span>191 отзыв</span>
+                                    </div>
+                                </div>
+                                <div class="company-item-buttons">
+                                    <a href="#" style="flex-grow: 1;">
+                                        <button class="btn company-item-go-btn">
+                                            <span>Карточка компании</span>
+                                            <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                                        </button>
+                                    </a>
+                                    <button class="btn company-item-fav-btn">
+                                        <img src="assets/img/_5_.webp" alt="">
                                     </button>
-                                </a>
-                                <button class="btn company-item-fav-btn">
-                                    <img src="assets/img/_5_.webp" alt="">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="company-item">
-                        <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
-                        <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
-                        <div class="company-item-stars-wrap">
-                            <img src="assets/img/fake-reviews_.webp" alt="">
-                            <span>5,0</span>
-                        </div>
-                        <div class="company-item-header">
-                            <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
-                            <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
-                        </div>
-                        <div class="company-item-image-wrap">
-                            <div class="company-item-image"
-                            style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
-                        </div>
-                        <div class="company-item-text-content">
-                            <div class="company-item-title">
-                                <div class="company-item-title-type">
-                                    Клининговая компания
-                                </div>
-                                <span>"Уборка 24"</span>
-                                <div class="company-item-title-reviews">
-                                    <img src="assets/img/comment-svgrepo-com.svg" alt="">
-                                    <span>191 отзыв</span>
                                 </div>
                             </div>
-                            <div class="company-item-buttons">
-                                <a href="#" style="flex-grow: 1;">
-                                    <button class="btn company-item-go-btn">
-                                        <span>Карточка компании</span>
-                                        <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                        </div>
+                        <div class="swiper-slide company-item rates-item-slide">
+                            <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
+                            <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
+                            <div class="company-item-stars-wrap">
+                                <div class="no-rate-wrap">
+                                    Нет рейтинга
+                                </div>
+                            </div>
+                            <div class="company-item-header">
+                                <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
+                                <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
+                            </div>
+                            <div class="company-item-image-wrap">
+                                <div class="company-item-image" style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
+                            </div>
+                            <div class="company-item-text-content">
+                                <div class="company-item-title">
+                                    <div class="company-item-title-type">
+                                        Клининговая компания
+                                    </div>
+                                    <span>"Уборка 24"</span>
+                                    <div class="company-item-title-reviews">
+                                        <img src="assets/img/comment-svgrepo-com.svg" alt="">
+                                        <span>191 отзыв</span>
+                                    </div>
+                                </div>
+                                <div class="company-item-buttons">
+                                    <a href="#" style="flex-grow: 1;">
+                                        <button class="btn company-item-go-btn">
+                                            <span>Карточка компании</span>
+                                            <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                                        </button>
+                                    </a>
+                                    <button class="btn company-item-fav-btn">
+                                        <img src="assets/img/_5_.webp" alt="">
                                     </button>
-                                </a>
-                                <button class="btn company-item-fav-btn">
-                                    <img src="assets/img/_5_.webp" alt="">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="company-item">
-                        <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
-                        <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
-                        <div class="company-item-stars-wrap">
-                            <img src="assets/img/fake-reviews_.webp" alt="">
-                            <span>5,0</span>
-                        </div>
-                        <div class="company-item-header">
-                            <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
-                            <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
-                        </div>
-                        <div class="company-item-image-wrap">
-                            <div class="company-item-image"
-                            style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
-                        </div>
-                        <div class="company-item-text-content">
-                            <div class="company-item-title">
-                                <div class="company-item-title-type">
-                                    Клининговая компания
-                                </div>
-                                <span>"Уборка 24"</span>
-                                <div class="company-item-title-reviews">
-                                    <img src="assets/img/comment-svgrepo-com.svg" alt="">
-                                    <span>191 отзыв</span>
                                 </div>
                             </div>
-                            <div class="company-item-buttons">
-                                <a href="#" style="flex-grow: 1;">
-                                    <button class="btn company-item-go-btn">
-                                        <span>Карточка компании</span>
-                                        <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                        </div>
+                        <div class="swiper-slide company-item rates-item-slide">
+                            <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
+                            <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
+                            <div class="company-item-stars-wrap">
+                                <div class="no-rate-wrap">
+                                    Нет рейтинга
+                                </div>
+                            </div>
+                            <div class="company-item-header">
+                                <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
+                                <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
+                            </div>
+                            <div class="company-item-image-wrap">
+                                <div class="company-item-image" style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
+                            </div>
+                            <div class="company-item-text-content">
+                                <div class="company-item-title">
+                                    <div class="company-item-title-type">
+                                        Клининговая компания
+                                    </div>
+                                    <span>"Уборка 24"</span>
+                                    <div class="company-item-title-reviews">
+                                        <img src="assets/img/comment-svgrepo-com.svg" alt="">
+                                        <span>191 отзыв</span>
+                                    </div>
+                                </div>
+                                <div class="company-item-buttons">
+                                    <a href="#" style="flex-grow: 1;">
+                                        <button class="btn company-item-go-btn">
+                                            <span>Карточка компании</span>
+                                            <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                                        </button>
+                                    </a>
+                                    <button class="btn company-item-fav-btn">
+                                        <img src="assets/img/_5_.webp" alt="">
                                     </button>
-                                </a>
-                                <button class="btn company-item-fav-btn">
-                                    <img src="assets/img/_5_.webp" alt="">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="company-item">
-                        <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
-                        <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
-                        <div class="company-item-stars-wrap">
-                            <img src="assets/img/fake-reviews_.webp" alt="">
-                            <span>5,0</span>
-                        </div>
-                        <div class="company-item-header">
-                            <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
-                            <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
-                        </div>
-                        <div class="company-item-image-wrap">
-                            <div class="company-item-image"
-                            style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
-                        </div>
-                        <div class="company-item-text-content">
-                            <div class="company-item-title">
-                                <div class="company-item-title-type">
-                                    Клининговая компания
-                                </div>
-                                <span>"Уборка 24"</span>
-                                <div class="company-item-title-reviews">
-                                    <img src="assets/img/comment-svgrepo-com.svg" alt="">
-                                    <span>191 отзыв</span>
                                 </div>
                             </div>
-                            <div class="company-item-buttons">
-                                <a href="#" style="flex-grow: 1;">
-                                    <button class="btn company-item-go-btn">
-                                        <span>Карточка компании</span>
-                                        <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                        </div>
+                        <div class="swiper-slide company-item rates-item-slide">
+                            <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
+                            <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
+                            <div class="company-item-stars-wrap">
+                                <div class="no-rate-wrap">
+                                    Нет рейтинга
+                                </div>
+                            </div>
+                            <div class="company-item-header">
+                                <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
+                                <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
+                            </div>
+                            <div class="company-item-image-wrap">
+                                <div class="company-item-image" style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
+                            </div>
+                            <div class="company-item-text-content">
+                                <div class="company-item-title">
+                                    <div class="company-item-title-type">
+                                        Клининговая компания
+                                    </div>
+                                    <span>"Уборка 24"</span>
+                                    <div class="company-item-title-reviews">
+                                        <img src="assets/img/comment-svgrepo-com.svg" alt="">
+                                        <span>191 отзыв</span>
+                                    </div>
+                                </div>
+                                <div class="company-item-buttons">
+                                    <a href="#" style="flex-grow: 1;">
+                                        <button class="btn company-item-go-btn">
+                                            <span>Карточка компании</span>
+                                            <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                                        </button>
+                                    </a>
+                                    <button class="btn company-item-fav-btn">
+                                        <img src="assets/img/_5_.webp" alt="">
                                     </button>
-                                </a>
-                                <button class="btn company-item-fav-btn">
-                                    <img src="assets/img/_5_.webp" alt="">
-                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide company-item rates-item-slide">
+                            <img class="company-item-corner-top" src="assets/img/company-item-corner-top.webp" alt="">
+                            <img class="company-item-corner-bottom" src="assets/img/company-item-corner-top.webp" alt="">
+                            <div class="company-item-stars-wrap">
+                                <div class="no-rate-wrap">
+                                    Нет рейтинга
+                                </div>
+                            </div>
+                            <div class="company-item-header">
+                                <img class="company-item-header-logo" src="assets/img/logo.png (1).webp" alt="logo">
+                                <img class="company-item-header-cert" src="assets/img/compte-twitter-certi.webp" alt="">
+                            </div>
+                            <div class="company-item-image-wrap">
+                                <div class="company-item-image" style="background: url(assets/img/__2025-06-08__235118.webp);"></div>
+                            </div>
+                            <div class="company-item-text-content">
+                                <div class="company-item-title">
+                                    <div class="company-item-title-type">
+                                        Клининговая компания
+                                    </div>
+                                    <span>"Уборка 24"</span>
+                                    <div class="company-item-title-reviews">
+                                        <img src="assets/img/comment-svgrepo-com.svg" alt="">
+                                        <span>191 отзыв</span>
+                                    </div>
+                                </div>
+                                <div class="company-item-buttons">
+                                    <a href="#" style="flex-grow: 1;">
+                                        <button class="btn company-item-go-btn">
+                                            <span>Карточка компании</span>
+                                            <img src="assets/img/arrow-sm-right-svgre.svg" alt="">
+                                        </button>
+                                    </a>
+                                    <button class="btn company-item-fav-btn">
+                                        <img src="assets/img/_5_.webp" alt="">
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="company-all-btn-wrap">
+                <div class="company-all-btn-wrap company-new-btn-wrap">
                     <a href="#">
                         <button class="btn company-all-btn">
                             Все клининговые компании
                         </button>
                     </a>
+                    <div class="new-company-slider-buttons">
+                        <button class="new-company-slider-btn new-company-slider-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#373A41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                        </button>
+                        <button class="new-company-slider-btn new-company-slider-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 24 24" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M6 12H18M18 12L13 7M18 12L13 17" stroke="#373A41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg> 
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
