@@ -2389,9 +2389,18 @@ nav ul li img.arrow {
 .card-page-comp-items-mob-title {
     display: none;
 }
-
-
-
+.all-rates-company-plates-wrap {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.all-rates-company-plates-wrap .rates-company-item {
+    flex: 1;
+    max-width: 300px;
+    min-width: 265px;
+}
+.rates-company-item-content {
+    gap: 10px;
+}
 
 
 @media (min-width: 1400px) {
@@ -2785,6 +2794,9 @@ nav ul li img.arrow {
     }
     .rates-company-item {
         width: 100%;
+    }
+    .all-rates-company-plates-wrap .rates-company-item {
+        max-width: unset;
     }
     .rates-company-title {
         line-height: 30px;
