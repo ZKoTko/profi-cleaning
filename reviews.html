@@ -243,7 +243,7 @@
                     <div class="breadcrumbs">
                         <span class="breadcrumbs-item"><a href="/">Главная</a></span>
                         <span class="breadcrumbs-separator">/</span>
-                        <span class="breadcrumbs-item current">Рейтинг компаний</span>
+                        <span class="breadcrumbs-item current">Отзывы</span>
                     </div>
                     <div class="custom-breadcrumb-part">
                         <span>ТОП-3 клининговых компаний</span>
@@ -257,8 +257,67 @@
                 <div class="card-page-main-wrapper">
                     <div class="card-page-content">
                         <section class="card-page-reviews card-page-section">
-                            <div class="card-page-about-title">Отзывы о компании "Уборка 24"</div>
+                            <div class="review-page-header">
+                                <div class="review-page-header-title">Отзывы о клининговых компаниях</div>
+                                <a href="#reviews-page-form-section" class="scroll-link">
+                                    <button class="btn review-page-header-btn">Оставить отзыв</button>
+                                </a>
+                            </div>
+                            <div class="review-page-filter-items-wrapper">
+                               <div class="filter-box-item filter-box-item--custom" id="filter-box-item-type">
+                                    <div class="filter-box-item-tapper"></div>
+                                    <div class="filter-box-select-header">
+                                        <span>Название компании</span>
+                                        <img src="assets/img/blue-chevron-down.svg" alt="chevron">
+                                    </div>
+                                    <div class="filter-box-dropdown">
+                                        <input class="filter-box-dropdown-search" type="text" placeholder="Название услуги">
+                                        <div class="filter-box-dropdown-list">
+                                        <ul>
+                                            <li>Генеральная уборка</li>
+                                            <li>После ремонта</li>
+                                            <li>Поддерживающая</li>
+                                            <li>Запущенных квартир</li>
+                                            <li>После пожара</li>
+                                            <li>После потопа</li>
+                                            <li>Срочная уборка</li>
+                                            <li>Комплексная</li>
+                                            <li>Однокомнатной</li>
+                                            <li>Двухкомнатной</li>
+                                        </ul>
+                                        </div>  
+                                    </div>
+                                </div>
+
+                                <div class="filter-box-item filter-box-item--custom" id="filter-box-item-date">
+                                    <div class="filter-box-item-tapper"></div>
+                                    <div class="filter-box-select-header">
+                                        <span>По умолчанию</span>
+                                        <img src="assets/img/blue-chevron-down.svg" alt="chevron">
+                                    </div>
+                                    <div class="filter-box-dropdown">
+                                        <div class="filter-box-dates-items">
+                                        <div class="filter-box-date-item">
+                                            <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter-date" class="filter-radio">
+                                            <span>По новизне</span>
+                                            </label>
+                                            <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter-date" class="filter-radio">
+                                            <span>Позитивные</span>
+                                            </label>
+                                            <label class="filter-box-button filter-box-date-item-button">
+                                            <input type="radio" name="filter-date" class="filter-radio">
+                                            <span>Негативные</span>
+                                            </label>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                             <div class="card-page-reviews-item">
+                                <img src="assets/img/logo.png (1).webp" alt="" class="reviews-page-rev-item-logo">
                                 <div class="card-page-reviews-avtor">Алла Парфенова</div>
                                 <div class="card-page-reviews-rate">
                                     <img src="assets/img/fake-reviews_.webp" alt="">
@@ -272,6 +331,7 @@
                                 </div>
                             </div>
                             <div class="card-page-reviews-item">
+                                <img src="assets/img/logo.png (1).webp" alt="" class="reviews-page-rev-item-logo">
                                 <div class="card-page-reviews-avtor">Алла Парфенова</div>
                                 <div class="card-page-reviews-rate">
                                     <img src="assets/img/fake-reviews_.webp" alt="">
@@ -284,9 +344,31 @@
                                     Уборка после ремонта
                                 </div>
                             </div>
+                            <div class="company-all-btn-wrap">
+                                <a href="#">
+                                    <button class="btn company-all-btn">
+                                        Показать еще отзывы
+                                    </button>
+                                </a>
+                            </div>
+                        </section>
+                        <section class="reviews-page-form-section card-page-section" id="reviews-page-form-section">
+                            <div class="reviews-page-form-section-title">Оставить отзыв о компании</div>
                             <form class="card-page-reviews-form">
                                 <div class="card-page-reviews-form-header">
                                     <input type="text" placeholder="Ваше имя">
+                                    <div class="card-page-reviews-select">
+                                        <span class="card-page-reviews-select-value">Название компании</span>
+                                        <img src="assets/img/blue-chevron-down.svg" alt="">
+                                        <div class="card-page-reviews-select-dropdown">
+                                            <ul>
+                                                <li class="card-page-reviews-select-choose">Название компании 1</li>
+                                                <li class="card-page-reviews-select-choose">Название компании 2</li>
+                                                <li class="card-page-reviews-select-choose">Название компании 3</li>
+                                                <li class="card-page-reviews-select-choose">Название компании 4</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <div class="card-page-reviews-select">
                                         <span class="card-page-reviews-select-value">Тип уборки</span>
                                         <img src="assets/img/blue-chevron-down.svg" alt="">

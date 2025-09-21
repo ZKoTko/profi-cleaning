@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   filterBoxes.forEach(box => {
+    const isCustom = box.classList.contains("filter-box-item--custom");
     const tapper = box.querySelector(".filter-box-item-tapper");
     const headerText = box.querySelector(".filter-box-select-header span");
     const dropdown = box.querySelector(".filter-box-dropdown");
@@ -118,15 +119,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const listItems = box.querySelectorAll(".filter-box-dropdown-list li");
     const search = box.querySelector(".filter-box-dropdown-search");
 
-    if (listItems.length > 0 && headerText) {
+    if (listItems.length > 0 && headerText && !isCustom) {
       headerText.textContent = listItems[0].textContent;
       listItems[0].classList.add("selected");
     }
 
     listItems.forEach(item => {
       item.addEventListener("click", function () {
-        if (this.classList.contains("not-found")) return; // игнорируем "ничего не найдено"
-
+        if (this.classList.contains("not-found")) return;
         headerText.textContent = this.textContent;
         listItems.forEach(i => i.classList.remove("selected"));
         this.classList.add("selected");
@@ -150,7 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        // Добавляем "ничего не найдено" если нужно
         let notFound = box.querySelector(".not-found");
         if (!notFound) {
           const ul = box.querySelector(".filter-box-dropdown-list ul");
@@ -166,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- Для блока с радио-кнопками (date) ---
     const radioLabels = box.querySelectorAll(".filter-box-date-item label");
-    if (radioLabels.length > 0 && headerText) {
+    if (radioLabels.length > 0 && headerText && !isCustom) {
       headerText.textContent = radioLabels[0].querySelector("span").textContent;
       radioLabels[0].classList.add("selected");
       radioLabels[0].querySelector("input").checked = true;
@@ -197,13 +196,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Клик вне фильтров → закрыть все
   document.addEventListener("click", function (e) {
     filterBoxes.forEach(box => {
       if (!box.contains(e.target)) setActive(box, false);
     });
   });
 });
+
 
 
 
@@ -271,34 +270,38 @@ document.querySelectorAll('input[name="filter"]').forEach(radio => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const select = document.querySelector(".card-page-reviews-select");
-  const value = select.querySelector(".card-page-reviews-select-value");
-  const dropdown = select.querySelector(".card-page-reviews-select-dropdown");
-  const options = dropdown.querySelectorAll(".card-page-reviews-select-choose");
+  const selects = document.querySelectorAll(".card-page-reviews-select");
 
-  // Открыть/закрыть дропдаун
-  select.addEventListener("click", (e) => {
-    if (!e.target.classList.contains("card-page-reviews-select-choose")) {
-      dropdown.classList.toggle("active");
-    }
-  });
+  selects.forEach((select) => {
+    const value = select.querySelector(".card-page-reviews-select-value");
+    const dropdown = select.querySelector(".card-page-reviews-select-dropdown");
+    const options = dropdown.querySelectorAll(".card-page-reviews-select-choose");
 
-  // Выбор элемента
-  options.forEach((option) => {
-    option.addEventListener("click", (e) => {
-      value.textContent = option.textContent; // подставляем выбранное значение
-      dropdown.classList.remove("active");   // закрываем дропдаун
-      e.stopPropagation();
+    // Открыть/закрыть дропдаун
+    select.addEventListener("click", (e) => {
+      if (!e.target.classList.contains("card-page-reviews-select-choose")) {
+        dropdown.classList.toggle("active");
+      }
+    });
+
+    // Выбор элемента
+    options.forEach((option) => {
+      option.addEventListener("click", (e) => {
+        value.textContent = option.textContent; // подставляем выбранное значение
+        dropdown.classList.remove("active");   // закрываем дропдаун
+        e.stopPropagation();
+      });
+    });
+
+    // Клик вне селекта закрывает дропдаун
+    document.addEventListener("click", (e) => {
+      if (!select.contains(e.target)) {
+        dropdown.classList.remove("active");
+      }
     });
   });
-
-  // Клик вне селекта закрывает дропдаун
-  document.addEventListener("click", (e) => {
-    if (!select.contains(e.target)) {
-      dropdown.classList.remove("active");
-    }
-  });
 });
+
 
 
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
@@ -321,5 +324,25 @@ const accordionItemHeaders = document.querySelectorAll(".accordion-item-header")
         accordionItemBody.style.maxHeight = 0;
         }
         
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a.scroll-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetID = this.getAttribute('href').substring(1);
+            const target = document.getElementById(targetID);
+
+            if (target) {
+                const offset = target.getBoundingClientRect().top + window.pageYOffset - 250;
+                window.scrollTo({
+                    top: offset,
+                    behavior: "smooth"
+                });
+            }
+        });
     });
 });
