@@ -3014,8 +3014,145 @@ nav ul li img.arrow {
     margin-bottom: 20px;
 }
 .reviews-page-form-section {
-    padding: 32px;
+    padding: 32px 40px;
 }
+.add-company-main-title {
+    line-height: 36px;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+.add-company-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 200px;
+}
+.add-company-step:nth-child(2),
+.add-company-step:nth-child(3) {
+    align-items: center;
+}
+.add-company-step:last-child {
+    align-items: flex-end;
+    max-width: 168px;
+}
+.add-company-step-num {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background-color: #035bf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    z-index: 1;
+}
+.add-company-step-title {
+    line-height: 21px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.add-company-step-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+}
+.add-company-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    margin-bottom: 64px;
+}
+.add-company-steps::after {
+    content: '';
+    width: 100%;
+    height: 43px;
+    border-radius: 50px;
+    background: #f0f4fa;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+.accc-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.accc-checkbox input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+.accc-box {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  background: #035bf1;
+  border-radius: 50%;      
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(3,91,241,0.18);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  flex-shrink: 0;
+}
+.accc-check {
+  opacity: 0;
+  transform: scale(.9);
+  transition: opacity .12s ease, transform .12s ease;
+}
+.accc-checkbox:hover .accc-box,
+.accc-checkbox:focus-within .accc-box {
+  transform: translateY(-1px);
+}
+.accc-checkbox input[type="checkbox"]:checked + .accc-box .accc-check {
+  opacity: 1;
+  transform: scale(1);
+}
+.add-company-custom-check {
+    display: flex;
+    gap: 10px;
+}
+.add-company-custom-check-text {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 300;
+}
+.add-company-custom-check-text a {
+    color: rgb(3, 91, 241);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4087,4 +4224,33 @@ nav ul li img.arrow {
     .review-page-header-title {
         line-height: 28px;
     }
+    .add-company-main-title {
+        line-height: 28px;
+    }
+    .add-company-steps {
+        flex-direction: column;
+        gap: 64px;
+        margin-bottom: 32px;
+    }
+    .add-company-step {
+        flex-direction: row;
+    }
+    .add-company-steps::after {
+        width: 43px;
+        height: calc(100% - 65px);
+        top: 0;
+        left: 8px;
+    }
+    .add-company-step-num {
+        min-width: 57px;
+        min-height: 57px;
+    }
+    .add-company-step {
+        max-width: unset !important;
+        align-items: flex-start !important;
+    }
+    .add-company-custom-check-text {
+        line-height: 15px;
+    }
+
 }
